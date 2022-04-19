@@ -39,7 +39,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String login() {
-		
+		System.out.println("hello");
 		return "login2";
 		
 	}
