@@ -20,9 +20,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.mockproject.automart.entity.Employee;
 import com.mockproject.automart.entity.Login;
+import com.mockproject.automart.entity.ProductLines;
+import com.mockproject.automart.entity.Products;
 import com.mockproject.automart.entity.Signin;
 import com.mockproject.automart.services.EmployeeServices;
 import com.mockproject.automart.services.LoginServices;
+import com.mockproject.automart.services.ProductLinesService;
+import com.mockproject.automart.services.ProductsService;
 import com.mockproject.automart.services.SigninService;
 
 @Controller
@@ -37,9 +41,20 @@ public class LoginController {
 	@Autowired
 	EmployeeServices employeeService;
 	
+	@Autowired
+	ProductLinesService productLinesService;
+	
+	@Autowired
+	ProductsService productsService;
+	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String login() {
-		System.out.println("hello");
+		
+		//List<Products> result = productsService.productNamesByProductLine("Motorcycles");
+		//System.out.println(result);
+		
+		List<ProductLines> productList = productLinesService.allProductLine();
+		System.out.println(productList);
 		return "login2";
 		
 	}
