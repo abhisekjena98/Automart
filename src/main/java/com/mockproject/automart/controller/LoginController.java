@@ -123,6 +123,57 @@ public class LoginController {
 	}
 	
 	
+
+	@RequestMapping(value="/home")
+	public String home() {
+		
+		return "index";
+		
+	}
+	
+	
+	
+	
+	
+	@RequestMapping(value="/index")
+	public String index() {
+		
+		return "index";
+		
+	}
+	
+	@RequestMapping(value="/checkout")
+	public String checkout() {
+		
+		return "checkout";
+		
+	}
+	@RequestMapping(value="/cart")
+	public String cart() {
+		
+		return "cart";
+		
+	}
+	@RequestMapping(value="/shop")
+	public String shop() {
+		
+		return "shop";
+		
+	}
+	@RequestMapping(value="/singleproduct")
+	public String singleproduct() {
+		
+		return "singleproduct";
+		
+	}
+	@RequestMapping(value="/category")
+	public String category() {
+		
+		return "category";
+		
+	}
+	
+	
 	
 	
 }
