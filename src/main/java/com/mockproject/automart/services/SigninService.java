@@ -35,12 +35,12 @@ public class SigninService {
 		Signin theEmail = signinRepository.findByEmailId(signin.getEmailId()); // checking email 
 		
 		if(theEmail==null) {
-			System.out.println("customer"+signin);
+			//System.out.println("customer"+signin);
 			signinRepository.save(signin); 
 			return true;
 		}
 		else {
-			System.out.println("EMAIL ALREADY EXIST");
+			//System.out.println("EMAIL ALREADY EXIST");
 			return false;
 		}
 	}

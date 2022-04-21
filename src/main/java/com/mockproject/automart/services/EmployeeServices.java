@@ -30,10 +30,11 @@ public class EmployeeServices {
 		List<Employee> theJobTitle = new ArrayList<Employee>();
 		
 		theJobTitle = employeeRepository.findDistinctEmployeeByJobTitle();
-		for(Employee result : theJobTitle) {
-			
-			System.out.println(result);
-		}
+		/*
+		 * for(Employee result : theJobTitle) {
+		 * 
+		 * System.out.println(result); }
+		 */
 		
 		return theJobTitle;
 	}

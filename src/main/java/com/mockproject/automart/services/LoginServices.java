@@ -16,8 +16,6 @@ public class LoginServices {
 		
 		Login result = loginRepository.findByLoginId(loginId);
 		
-		System.out.println(result);
-		
 		return result;
 	}
 }
