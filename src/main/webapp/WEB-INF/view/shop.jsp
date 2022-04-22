@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -11,7 +12,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop Page- Ustora Demo</title>
+    <title>Shop Page- Automart</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -83,7 +84,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
+                        <h1><a href="./"><img src="img/autimart.png"></a></h1>
                     </div>
                 </div>
                 
@@ -110,18 +111,18 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index">Home</a></li>
-                       <li><a href="#">Category
-                        <div class="form-group">
-				<select class="form-control" name="category" id="category" onchange="category()" required>
-					<option value="">--Select Category--</option>
-					<c:forEach var="category" items="${List3}">
+                       <li><a href="#">
+                        
+						<select  name="category" id="category" style="border: none; outline: none; scroll-behavior: smooth;" onchange="category()" required>
+								<option value="">CATEGORY</option>
+								<c:forEach var="category" items="${ProductList}">
 
-						<option value="${category.job_title}">${category.job_title}</option>
+								<option value="${category.productLine}">${category.productLine}</option>
 
-					</c:forEach>
+								</c:forEach>
 
-				</select> 
-			</div>
+							</select> 
+						
                        
                         </a></li>
                         <li class="active"><a href="shop">Shop page</a></li>
@@ -153,14 +154,17 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
+            <c:forEach var="productnamelist" items="${ProductNameList}">
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="img/product-2.jp" alt="">
+                            <!-- <img src="img/product-2.jp" alt=""> -->
                         </div>
-                        <h2><a href="">1969 Harley Davidson Ultimate Chopper</a></h2>
+                        <h2><a href="">${productnamelist.productName}</a></h2>
                          <div class="product-carousel-price">
-                            <ins>95.70</ins> <del>105.70</del>
+                         	<ins>VENDOR : ${productnamelist.productVendor}</ins><br><br>
+                         	<ins > DESCRIPTION : ${productnamelist.productDescription}</ins><br><br>
+                            <ins>PRICE : ${productnamelist.msrp}</ins> <del>105.70</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -168,10 +172,9 @@
                         </div>                       
                     </div>
                 </div>
-                
-                
-                
-                <div class="col-md-3 col-sm-6">
+                </c:forEach>
+                </div>
+              <!--   <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
                             <img src="img/product-1.jp" alt="">
@@ -1240,11 +1243,11 @@
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
                         </div>                       
                     </div>
-                </div>
+                </div> -->
 	
 	
 	
-1938 Cadillac V-16 Presidential Limousine	44.80
+<!-- 1938 Cadillac V-16 Presidential Limousine	44.80
 1962 Volkswagen Microbus	127.79
 1982 Ducati 900 Monster	69.26
 1949 Jaguar XK 120	90.87
@@ -1290,7 +1293,7 @@ The Titanic	100.17
 The Queen Mary	99.31
 American Airlines: MD-11S	74.03
 Boeing X-32A JSF	49.66
-Pont Yacht	54.60
+Pont Yacht	54.60 -->
                         
                       
               
@@ -1400,6 +1403,7 @@ Pont Yacht	54.60
             </div>
         </div>
     </div>
+    
    
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>

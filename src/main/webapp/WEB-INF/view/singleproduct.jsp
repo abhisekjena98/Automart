@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -11,7 +12,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product Page - Ustora Demo</title>
+    <title>Product Page - Automart</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -85,7 +86,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
+                        <h1><a href="./"><img src="img/autimart.png"></a></h1>
                     </div>
                 </div>
                 
@@ -112,18 +113,18 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index">Home</a></li>
-                       <li><a href="#">Category
+                       <li><a href="#">
                         <div class="form-group">
-				<select class="form-control" name="category" id="category" onchange="category()" required>
-					<option value="">--Select Category--</option>
-					<c:forEach var="category" items="${List3}">
+					<select  name="category" id="category" style="border: none; outline: none; scroll-behavior: smooth;" onchange="category()" required>
+							<option value="">CATEGORY</option>
+							<c:forEach var="category" items="${ProductList}">
 
-						<option value="${category.job_title}">${category.job_title}</option>
+							<option value="${category.productLine}">${category.productLine}</option>
 
-					</c:forEach>
+							</c:forEach>
 
-				</select> 
-			</div>
+					</select>  
+				</div>
                        
                         </a></li>
                         <li><a href="shop">Shop page</a></li>

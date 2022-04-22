@@ -1,7 +1,9 @@
 package com.mockproject.automart.controller;
 
+import java.net.http.HttpRequest;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,15 +49,19 @@ public class LoginController {
 	@Autowired
 	ProductsService productsService;
 	
-	@RequestMapping(value="/", method = RequestMethod.GET)
+	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login() {
 		
 		//List<Products> result = productsService.productNamesByProductLine("Motorcycles");
 		//System.out.println(result);
 		
-		List<ProductLines> productList = productLinesService.allProductLine();
-		System.out.println(productList);
-		return "login2";
+		
+		/*
+		 * List<ProductLines> productList = productLinesService.allProductLine();
+		 * System.out.println(productList);
+		 */
+		  
+		  return "login2";
 		
 	}
 	
@@ -78,7 +84,7 @@ public class LoginController {
 		}
 		else{
 			
-			return "homepage";
+			return "index";
 		}		
 		
 	}
@@ -137,22 +143,13 @@ public class LoginController {
 		
 	}
 	
-	
-
-	@RequestMapping(value="/home")
-	public String home() {
 		
-		return "index";
+	@RequestMapping(value="/")
+	public String index(HttpSession s) {
 		
-	}
-	
-	
-	
-	
-	
-	@RequestMapping(value="/index")
-	public String index() {
-		
+		List<ProductLines> productList = productLinesService.allProductLine();
+		s.setAttribute("ProductList",productList);
+		 
 		return "index";
 		
 	}
@@ -187,6 +184,20 @@ public class LoginController {
 		return "category";
 		
 	}
+	@PostMapping(value="/list")
+	@ResponseBody
+	public String categoryList(@RequestBody String data, ModelMap model,HttpSession s) {
+		System.out.println(data);
+		
+		List<Products>productNameList= productsService.productNamesByProductLine(data);
+		System.out.println(productNameList);
+		s.setAttribute("ProductNameList",productNameList);
+		return "shop";
+		
+	}
+	
+	
+	
 	
 	
 	

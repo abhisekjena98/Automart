@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <!--
 	ustora by freshdesignweb.com
@@ -11,7 +12,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ustora Demo</title>
+<title>Automart</title>
 
 <!-- Google Fonts -->
 <link
@@ -51,11 +52,10 @@
 						<ul>
 							<li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
 							<!--  <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li> -->
-							<li><a href="signup"><i class="fa fa-user"></i> SignUp</a></li>
+							<li><a href="signin"><i class="fa fa-user"></i> SignUp</a></li>
 
 							<li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-							<li><a href="checkout"><i class="fa fa-user"></i>
-									Checkout</a></li>
+							<li><a href="checkout"><i class="fa fa-user"></i>Checkout</a></li>
 							<li><a href="login"><i class="fa fa-user"></i> Login</a></li>
 						</ul>
 					</div>
@@ -78,11 +78,13 @@
 								data-toggle="dropdown" data-hover="dropdown"
 								class="dropdown-toggle" href="#"><span class="key">language
 										:</span><span class="value">English </span><b class="caret"></b></a>
-								<ul class="dropdown-menu">
+									<ul class="dropdown-menu">
 									<li><a href="#">English</a></li>
 									<li><a href="#">French</a></li>
 									<li><a href="#">German</a></li>
-								</ul></li>
+								</ul>
+								</li>
+									
 						</ul>
 					</div>
 				</div>
@@ -97,7 +99,7 @@
 				<div class="col-sm-6">
 					<div class="logo">
 						<h1>
-							<a href="./"><img src="img/logo.png"></a>
+							<a href="./"><img src="img/autimart.png"></a>
 						</h1>
 					</div>
 				</div>
@@ -124,32 +126,24 @@
 							class="icon-bar"></span>
 					</button>
 				</div>
+						
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="index">Home</a></li>
-						<li><a href="#">Category
-						<div class="form-group">
-				<select class="form-control" name="category" id="category" onchange="category()" required>
-					<option value="">--Select Category--</option>
-					<c:forEach var="category" items="${List3}">
+						<li class="active"><a href="/">Home</a></li>
+						<li><a href="#">
+						
+							<select  name="category" id="categorylist" style="border: none; outline: none; scroll-behavior: smooth;" onchange="category_list()" required>
+								<option value="">CATEGORY</option>
+									<c:forEach var="category" items="${ProductList}">
 
-						<option value="${category.job_title}">${category.job_title}</option>
+									<option value="${category.productLine}">${category.productLine}</option>
 
-					</c:forEach>
+								</c:forEach>
 
-				</select> 
-			</div>
+								</select> 
 						
 						</a></li>
-						
-<!--Classic Cars
-Motorcycles
-Planes
-Ships
-Trains
-Trucks and Buses
-Vintage Cars
-				 -->		<li><a href="shop">Shop page</a></li>
+						<li><a href="shop">Shop page</a></li>
 						<li><a href="singleproduct">Single product</a></li>
 						<li><a href="cart">Cart</a></li>
 						<li><a href="checkout">Checkout</a></li>
@@ -172,7 +166,7 @@ Vintage Cars
 						<h2 class="caption title" style="color:white">
 							Classic Car <span class="primary">Ford <strong style="color:white">Mustang'47</strong></span>
 						</h2>
-						<h4 class="caption subtitle">American Muscle</h4>
+						<h4 class="caption subtitle" style="color:white">American Muscle</h4>
 						<a class="caption button-radius" href="#"><span class="icon"></span>Shop
 							now</a>
 					</div></li>
@@ -651,7 +645,33 @@ Vintage Cars
 		</div>
 	</div>
 	<!-- End footer bottom area -->
-
+	
+	
+ <script type="text/javascript" >
+   
+   function category_list(){
+ 		const list = $("#categorylist").val();
+ 		console.log(list);
+ 		
+ 		
+ 		$.ajax({
+ 			
+ 			type:"POST",
+ 			url: "/list",
+ 			data: list,
+ 	        contentType: "application/json",
+ 			success: function(data)
+ 			{
+ 				console.log(data);
+ 				
+ 		            window.location = data;
+ 			}
+ 		});
+   }
+ 			
+ </script>
+  
+  
 	<!-- Latest jQuery form server -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 
