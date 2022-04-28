@@ -1,5 +1,6 @@
 package com.mockproject.automart.repository;
 
+
 import java.util.List;
 
 import javax.persistence.Tuple;
@@ -23,5 +24,6 @@ public interface OrderdetailsRepository extends JpaRepository<Orderdetails, Orde
 	public List<Tuple> productCodeByProducts();
 
 	
+
 }
 

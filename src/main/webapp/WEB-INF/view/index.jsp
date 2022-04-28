@@ -99,9 +99,14 @@
 
 <div class="col-sm-6">
 					<div class="shopping-item">
+<<<<<<< HEAD
 						<a href="cart">Cart<span class="cart-amunt"></span>
 							<i class="fa fa-shopping-cart"></i>
 							<p class="product-count" id="cartValue"></p></a>
+=======
+						<a href="cart">Cart <i
+							class="fa fa-shopping-cart"></i></a>
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
 					</div>
 				</div>
 
@@ -140,12 +145,20 @@
 								</select> 
 						
 						</a></li>
+<<<<<<< HEAD
 						<li><a href="shop">Products</a></li>
 					
+=======
+						<li><a href="shop">Shop page</a></li>
+						<!-- <li><a href="singleproduct">Single product</a></li> -->
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
 						<li><a href="cart">Cart</a></li>
 						
+<<<<<<< HEAD
 						<li><a href="orderDetails">Orders</a></li>
 						
+=======
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
 					</ul>
 				</div>
 			</div>
@@ -559,7 +572,11 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="footer-about-us">
 						<h2>
+<<<<<<< HEAD
 						<span>Automart</span>
+=======
+							<span>Automart</span>
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
 						</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							Perferendis sunt id doloribus vero quam laborum quas alias

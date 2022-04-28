@@ -1,5 +1,6 @@
 package com.mockproject.automart.services;
 
+
 import java.util.List;
 
 import javax.persistence.Tuple;
@@ -27,5 +28,5 @@ public class OrderdetailsService {
 			orderDetailsRepository.save(orderdetails);
 		}
  
-		 
+	
 }

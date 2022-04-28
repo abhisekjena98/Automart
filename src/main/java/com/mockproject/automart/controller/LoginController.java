@@ -143,10 +143,12 @@ public class LoginController {
 		
 		List<Products>allProducts = productsService.allProducts();
 		s.setAttribute("ProductNameList", allProducts);
+
 		
 		List<Tuple> result1 =orderdetailsService.productNameroducts();		
 		System.out.println(result1);
 		s.setAttribute("result",result1);
+
 
 		return "index";
 
@@ -205,6 +207,7 @@ public class LoginController {
 		List<Products> productNameList = productsService.productNamesByProductLine(data);
 		s.setAttribute("ProductNameList", productNameList);
 		return "shop";
+
 
 	}
 
@@ -297,13 +300,17 @@ public class LoginController {
 			}
 			
 		}
+
 	}
-	
 	@RequestMapping(value="/orderDetails")
 	public String orderDetails() {
 		
 		return "orderDetails";
 		
+
+
+		
+
 	}
 
 }

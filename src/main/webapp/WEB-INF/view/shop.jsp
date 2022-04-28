@@ -34,11 +34,21 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<<<<<<< HEAD
     <style type="text/css">
     #description{
     
     width: 200px;  height: 80px; overflow: hidden;}
     </style>
+=======
+   <style type="text/css">
+		#description{
+		white-space: nowrap;
+  		overflow: hidden;
+  		text-overflow: inherit;
+  		}
+	</style>
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
   </head>
   <body>
    
@@ -48,7 +58,11 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
+<<<<<<< HEAD
                             <li><a href="signin"><i class="fa fa-user"></i>SignUp</a></li>
+=======
+                            <li><a href="signin"><i class="fa fa-user"></i>Signin</a></li>
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                             <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
                             <li><a href="login"><i class="fa fa-user"></i> Login</a></li>
                             <li><a href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
@@ -92,6 +106,7 @@
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                <div class="col-sm-6">
 					<div class="shopping-item">
 						<a href="cart">Cart<span class="cart-amunt"></span>
@@ -99,6 +114,13 @@
 							<p class="product-count" id="cartValue"></p></a>
 					</div>
 				</div>
+=======
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="cart">Cart<i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
             </div>
         </div>
     </div> <!-- End site branding area -->
@@ -131,13 +153,22 @@
 						
                        
                         </a></li>
+<<<<<<< HEAD
                         <li class="active"><a href="shop">Products</a></li>
                         
+=======
+                        <li class="active"><a href="shop">Shop page</a></li>
+                        <!-- <li><a href="singleproduct">Single product</a></li> -->
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                         <li><a href="cart">Cart</a></li>
+<<<<<<< HEAD
                        
                         <li><a href="orderDetails">Orders</a></li>
                         <!-- <li><a href="#">Others</a></li>
                         <li><a href="#">Contact</a></li> -->
+=======
+                        
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                     </ul>
                 </div>  
             </div>
@@ -182,7 +213,32 @@
                 </div>
                 </c:forEach>
                 </div>
+<<<<<<< HEAD
              
+=======
+                </div>
+                </div>
+                <!--  <div class="col-md-3 col-sm-6">
+                    <div class="single-shop-product">
+                        <div class="product-upper">
+                            <img src="img/product-1.jp" alt="">
+                        </div>
+                        <h2><a href="">1952 Alpine Renault 1300</a></h2>
+                        <div class="product-carousel-price">
+                            <ins>214.30</ins> <del>314.30</del>
+                        </div>  
+                        
+                        <div class="product-option-shop">
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
+                        </div>                       
+                    </div>
+                </div>
+              </div>
+              </div>   -->
+                
+                  
+                        
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                       
               
             
@@ -214,7 +270,10 @@
         </div>
     </div>
  -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
 
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
