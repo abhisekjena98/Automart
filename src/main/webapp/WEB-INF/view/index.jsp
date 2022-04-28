@@ -2,11 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 	 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
-<!--
-	ustora by freshdesignweb.com
-	Twitter: https://twitter.com/freshdesignweb
-	URL: https://www.freshdesignweb.com/ustora/
--->
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -50,13 +46,10 @@
 				<div class="col-md-8">
 					<div class="user-menu">
 						<ul>
-							<li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-							<!--  <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li> -->
 							<li><a href="signin"><i class="fa fa-user"></i> SignUp</a></li>
-
 							<li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-							<li><a href="checkout"><i class="fa fa-user"></i>Checkout</a></li>
 							<li><a href="login"><i class="fa fa-user"></i> Login</a></li>
+							<li><a href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -104,12 +97,16 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6">
+<div class="col-sm-6">
 					<div class="shopping-item">
-						<a href="cart">Cart - <span class="cart-amunt">$100</span> <i
-							class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+						<a href="cart">Cart<span class="cart-amunt"></span>
+							<i class="fa fa-shopping-cart"></i>
+							<p class="product-count" id="cartValue"></p></a>
 					</div>
 				</div>
+
+
+				
 			</div>
 		</div>
 	</div>
@@ -143,13 +140,12 @@
 								</select> 
 						
 						</a></li>
-						<li><a href="shop">Shop page</a></li>
-						<li><a href="singleproduct">Single product</a></li>
+						<li><a href="shop">Products</a></li>
+					
 						<li><a href="cart">Cart</a></li>
-						<li><a href="checkout">Checkout</a></li>
 						
-						<!-- <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li> -->
+						<li><a href="orderDetails">Orders</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -563,7 +559,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="footer-about-us">
 						<h2>
-							u<span>Stora</span>
+						<span>Automart</span>
 						</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							Perferendis sunt id doloribus vero quam laborum quas alias
@@ -596,11 +592,13 @@
 					<div class="footer-menu">
 						<h2 class="footer-wid-title">Categories</h2>
 						<ul>
-							<li><a href="#">Mobile Phone</a></li>
-							<li><a href="#">Home accesseries</a></li>
-							<li><a href="#">LED TV</a></li>
-							<li><a href="#">Computer</a></li>
-							<li><a href="#">Gadets</a></li>
+							<li><a href="#">Classic Cars</a></li>
+							<li><a href="#">Motorcycles</a></li>
+							<li><a href="#">Planes</a></li>
+							<li><a href="#">Trucks and Buses</a></li>
+							<li><a href="#">Ships</a></li>
+							<li><a href="#">Trains</a></li>
+							<li><a href="#">Vintage Cars</a></li>
 						</ul>
 					</div>
 				</div>

@@ -11,4 +11,6 @@ import com.mockproject.automart.entity.Products;
 public interface ProductsRepository extends JpaRepository<Products, String> {
 
 	public List<Products> findByProductLine(String productLine);
+	
+	public Products findByProductCode(String productCode);
 }
