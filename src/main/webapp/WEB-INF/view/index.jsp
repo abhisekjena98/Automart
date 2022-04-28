@@ -50,13 +50,10 @@
 				<div class="col-md-8">
 					<div class="user-menu">
 						<ul>
-							<li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-							<!--  <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li> -->
 							<li><a href="signin"><i class="fa fa-user"></i> SignUp</a></li>
-
 							<li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-							<li><a href="checkout"><i class="fa fa-user"></i>Checkout</a></li>
 							<li><a href="login"><i class="fa fa-user"></i> Login</a></li>
+							<li><a href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -106,8 +103,8 @@
 
 				<div class="col-sm-6">
 					<div class="shopping-item">
-						<a href="cart">Cart - <span class="cart-amunt">$100</span> <i
-							class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+						<a href="cart">Cart <i
+							class="fa fa-shopping-cart"></i></a>
 					</div>
 				</div>
 			</div>
@@ -144,12 +141,9 @@
 						
 						</a></li>
 						<li><a href="shop">Shop page</a></li>
-						<li><a href="singleproduct">Single product</a></li>
+						<!-- <li><a href="singleproduct">Single product</a></li> -->
 						<li><a href="cart">Cart</a></li>
-						<li><a href="checkout">Checkout</a></li>
 						
-						<!-- <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li> -->
 					</ul>
 				</div>
 			</div>
@@ -563,7 +557,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="footer-about-us">
 						<h2>
-							u<span>Stora</span>
+							<span>Automart</span>
 						</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							Perferendis sunt id doloribus vero quam laborum quas alias

@@ -23,4 +23,15 @@ public class ProductsService {
 		return productNames;
 	}
 
+	public Products productListByProductCode(String productCode) {
+		
+		Products productList = productsRepository.findByProductCode(productCode);
+		
+		return productList;
+	}
+	
+	public List<Products> allProducts(){
+		
+		return productsRepository.findAll();
+	}
 }
