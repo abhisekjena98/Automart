@@ -56,29 +56,7 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="header-right">
-                        <ul class="list-unstyled list-inline">
-                            <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">USD</a></li>
-                                    <li><a href="#">INR</a></li>
-                                    <li><a href="#">GBP</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">German</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div> <!-- End header area -->
@@ -126,9 +104,10 @@
 
 								</select> 
                         </a></li>
-                        <li><a href="shop">Shop page</a></li>
+                        <li><a href="shop">Product</a></li>
                        <!--  <li><a href="singleproduct">Single product</a></li> -->
                         <li class="active"><a href="cart">Cart</a></li>
+                        <li><a href="orderDetails">Orders</a></li>
                   
                     </ul>
                 </div>  
@@ -178,7 +157,7 @@
                                         <tr class="cart_item">
 
                                             <td class="product-name">
-                                                <a href="single-product.html">${cartList.get('product_name')}</a> 
+                                                <p>${cartList.get('product_name')}</p> 
                                             </td>
 
                                             <td class="product-price">
@@ -256,11 +235,15 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
-                            <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
-                            <li><a href="#">Gadets</a></li>
+                           <ul>
+							<li><a href="#">Classic Cars</a></li>
+							<li><a href="#">Motorcycles</a></li>
+							<li><a href="#">Planes</a></li>
+							<li><a href="#">Trucks and Buses</a></li>
+							<li><a href="#">Ships</a></li>
+							<li><a href="#">Trains</a></li>
+							<li><a href="#">Vintage Cars</a></li>
+						</ul>
                         </ul>                        
                     </div>
                 </div>
@@ -411,7 +394,18 @@
 			
 			type:"POST",
 			url: "/placeorder",
-
+			success: function(data)
+			{
+				console.log(data);
+				if(data==true){
+					alert("Order Placed Successfully !");
+		            window.location ="orderDetails";
+				}
+				else{
+					
+					alert("Cart is Empty");
+				}
+			}
 		});
  }
   

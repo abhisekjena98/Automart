@@ -35,4 +35,10 @@ public interface CartRepository extends JpaRepository<Cart, Integer> {
 	@Transactional
 	@Query(value="UPDATE cart SET quantity= :quant WHERE product_code= :productCode AND customer_number= :customerNumber",nativeQuery=true)
 	public void updateCartQuantity(@Param("quant")int quantity, @Param("productCode")String productCode,@Param("customerNumber")String customerNumber);
+	
+	@Modifying 
+	@Transactional
+	@Query(value="DELETE from cart WHERE customer_number= :customerNumber",nativeQuery=true)
+	public void deleteByCustomerNumber(String customerNumber);
+	
 }

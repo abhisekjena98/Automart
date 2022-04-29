@@ -46,11 +46,10 @@
 				<div class="col-md-8">
 					<div class="user-menu">
 						<ul>
-							<li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-							<li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-							<li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-							<li><a href="checkout"><i class="fa fa-user"></i> Checkout</a></li>
-							<li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+							<li><a href="signin"><i class="fa fa-user"></i> Signin</a></li>
+                            <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
+                            <li><a href="login"><i class="fa fa-user"></i> Login</a></li>
+                            <li><a href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -63,7 +62,7 @@
 	</div>
 	<!-- End header area -->
 
-	<!-- <div class="site-branding-area">
+	<div class="site-branding-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
@@ -78,12 +77,12 @@
 					<div class="shopping-item">
 						<a href="cart">Cart<span class="cart-amunt"></span>
 							<i class="fa fa-shopping-cart"></i>
-							<p class="product-count" id="cartValue"></p></a>
+							<!-- <p class="product-count" id="cartValue"></p> --></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div> 
 	<!-- End site branding area -->
 
 	<div class="mainmenu-area">
@@ -189,36 +188,30 @@
 											<th class="product-remove">Order No.</th>
 											
 											<th class="product-name">Product Name</th>
-											<%-- ${productnamelist.product_name} --%>
+											
 											<th class="product-name">Product Line</th>
 											<th class="product-quantity">Ordered Date</th>
 											<th class="product-quantity">Quantity Ordered</th>
 											<th class="product-quantity">Total</th>
 											
-											<%-- ${productnamelist.get('order_date')} --%>
+											
 										</tr>
 									</thead>
 									<tbody>
 									<c:forEach var="productnamelist"  items="${result}">
 										<tr class="cart_item">
-											<td class="product-remove"><a title="Remove this item"
-												class="remove" href="orderDetails">${productnamelist.get('order_number')}—</a></td>
+											<td class="product-remove">${productnamelist.get('order_number')}—</td>
 
-											<!-- <td class="product-thumbnail"><a href="singleproduct"><img
-													width="145" height="145" alt="poster_1_up"
-													class="shop_thumbnail" src="img/product-thumb-2.jp"></a>
-											</td> -->
-
-											<td ><a href="orderDetails">${productnamelist.get('product_name')}</a></td>
-											<td ><a href="orderDetails">${productnamelist.get('product_line')}</a></td>
-											<%-- ${productnamelist.get('product_description')} --%>
-											<td ><a href="orderDetails">${productnamelist.get('order_date')}</a></td>
+											<td ><p>${productnamelist.get('product_name')}</p></td>
+											<td ><p>${productnamelist.get('product_line')}</p></td>
+											
+											<td ><p>${productnamelist.get('order_date')}</p></td>
 											
 											<td ><span class="amount">${productnamelist.get('quantity_ordered')}</span>
-											<%-- ${productnamelist.get('quantity_ordered')} --%>
-											<td "><span class="amount">15.00</span>
 											
-											<%-- ${productnamelist.get('msrp')} --%>
+											<td ><span class="amount">${productnamelist.get('total')}</span>
+											
+											
 											</td>
 
 											
