@@ -65,7 +65,10 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
 
-		
+		List<Cart>result = cartService.findByCustomerNumber("400");
+		if(result.isEmpty()==true) {
+			System.out.println("Hello"+ result.isEmpty());
+		}
 		
 		return "login2";
 
@@ -87,6 +90,10 @@ public class LoginController {
 			return "login2";
 		} else {
 			session.setAttribute("LoginId", login.getLogin_id());
+			
+			List<Tuple> result1 =orderdetailsService.productNameroducts(login.getLogin_id());		
+			session.setAttribute("result",result1);
+			
 			return "index";
 		}
 
@@ -144,12 +151,14 @@ public class LoginController {
 		List<Products>allProducts = productsService.allProducts();
 		s.setAttribute("ProductNameList", allProducts);
 
+		String customernumber = (String) s.getAttribute("LoginId");
 		
-		List<Tuple> result1 =orderdetailsService.productNameroducts();		
-		System.out.println(result1);
-		s.setAttribute("result",result1);
-
-
+		if(customernumber != null) {
+			
+			List<Tuple> result1 =orderdetailsService.productNameroducts(customernumber);		
+			s.setAttribute("result",result1);
+		}
+		
 		return "index";
 
 	}
@@ -247,8 +256,9 @@ public class LoginController {
 	public String quantity(@RequestBody HashMap<String, Integer> data, HttpSession s) {
 
 		String customernumber = (String) s.getAttribute("LoginId");
+		List<Cart> cartValue = cartService.findByCustomerNumber(customernumber);
 
-		if (customernumber != null) {
+		if (customernumber != null && cartValue.isEmpty()==false) {
 			for (Map.Entry<String, Integer> set : data.entrySet()) {
 
 				cartService.updateCart(set.getValue(), set.getKey(), customernumber);
@@ -268,13 +278,15 @@ public class LoginController {
 	}
 
 	@PostMapping(value = "/placeorder")
-	public void placeOrder(HttpSession s, Orderdetails orderDetails, Orders orders) {
+	@ResponseBody
+	public boolean placeOrder(HttpSession s, Orderdetails orderDetails, Orders orders) {
 
 		String customernumber = (String) s.getAttribute("LoginId");
 		Integer newOrderNumber = Integer.parseInt(ordersService.newOrderNumber().get("pk").toString());
 		
+		List<Cart> cartValue = cartService.findByCustomerNumber(customernumber);
 
-		if (customernumber != null) {
+		if (customernumber != null && cartValue.isEmpty()==false) {
 			
 			orders.setComments(null);
 			orders.setCustomerNumber(customernumber);
@@ -298,7 +310,13 @@ public class LoginController {
 				
 				orderdetailsService.addOrderdetails(orderDetails);
 			}
+			cartService.deleteByCustomerNumber(customernumber);
+			return true;
 			
+		}
+		else 
+		{
+			return false;
 		}
 
 	}

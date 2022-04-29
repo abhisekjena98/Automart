@@ -61,4 +61,9 @@ public class CartService {
 		
 		return cartRepository.findByCustomerNumber(customerNumber);
 	}
+	
+	public void deleteByCustomerNumber(String customerNumber) {
+		
+		cartRepository.deleteByCustomerNumber(customerNumber);
+	}
 }

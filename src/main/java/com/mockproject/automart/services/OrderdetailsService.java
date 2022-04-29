@@ -18,9 +18,9 @@ public class OrderdetailsService {
 	
 	
 
-	  public List<Tuple> productNameroducts() {
+	  public List<Tuple> productNameroducts(String customerNumber) {
 		  
-		  return orderDetailsRepository.productCodeByProducts();
+		  return orderDetailsRepository.productCodeByProducts(customerNumber);
 	  }
 
 	  public void addOrderdetails(Orderdetails orderdetails) {

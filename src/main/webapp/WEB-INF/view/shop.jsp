@@ -34,13 +34,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<<<<<<< HEAD
     <style type="text/css">
     #description{
     
     width: 200px;  height: 80px; overflow: hidden;}
     </style>
-=======
    <style type="text/css">
 		#description{
 		white-space: nowrap;
@@ -48,7 +46,7 @@
   		text-overflow: inherit;
   		}
 	</style>
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
+
   </head>
   <body>
    
@@ -58,11 +56,8 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-<<<<<<< HEAD
+
                             <li><a href="signin"><i class="fa fa-user"></i>SignUp</a></li>
-=======
-                            <li><a href="signin"><i class="fa fa-user"></i>Signin</a></li>
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                             <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
                             <li><a href="login"><i class="fa fa-user"></i> Login</a></li>
                             <li><a href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
@@ -72,25 +67,7 @@
                 
                 <div class="col-md-4">
                     <div class="header-right">
-                        <!-- <ul class="list-unstyled list-inline">
-                            <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">USD</a></li>
-                                    <li><a href="#">INR</a></li>
-                                    <li><a href="#">GBP</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">German</a></li>
-                                </ul>
-                            </li>
-                        </ul> -->
+                       
                     </div>
                 </div>
             </div>
@@ -106,24 +83,18 @@
                     </div>
                 </div>
                 
-<<<<<<< HEAD
+
                <div class="col-sm-6">
 					<div class="shopping-item">
 						<a href="cart">Cart<span class="cart-amunt"></span>
 							<i class="fa fa-shopping-cart"></i>
-							<p class="product-count" id="cartValue"></p></a>
+							<!-- <p class="product-count" id="cartValue"></p> --></a>
 					</div>
 				</div>
-=======
-                <div class="col-sm-6">
-                    <div class="shopping-item">
-                        <a href="cart">Cart<i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                </div>
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
             </div>
         </div>
-    </div> <!-- End site branding area -->
+    </div> 
+    <!-- End site branding area -->
     
     <div class="mainmenu-area">
         <div class="container">
@@ -153,27 +124,17 @@
 						
                        
                         </a></li>
-<<<<<<< HEAD
+
                         <li class="active"><a href="shop">Products</a></li>
-                        
-=======
-                        <li class="active"><a href="shop">Shop page</a></li>
-                        <!-- <li><a href="singleproduct">Single product</a></li> -->
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                         <li><a href="cart">Cart</a></li>
-<<<<<<< HEAD
                        
                         <li><a href="orderDetails">Orders</a></li>
-                        <!-- <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li> -->
-=======
-                        
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
                     </ul>
                 </div>  
             </div>
         </div>
-    </div> <!-- End mainmenu area -->
+    </div> 
+    <!-- End mainmenu area -->
     
     <div class="product-big-title-area">
         <div class="container">
@@ -196,9 +157,7 @@
             <c:forEach var="productnamelist" items="${ProductNameList}">
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
-                       <!--  <div class="product-upper">
-                            <img src="img/product-2.jp" alt="">
-                        </div> -->
+                       
                         <h2><a href="">${productnamelist.productName}</a></h2>
                          <div class="product-carousel-price">
                          	<ins>VENDOR : ${productnamelist.productVendor}</ins><br><br>
@@ -213,68 +172,10 @@
                 </div>
                 </c:forEach>
                 </div>
-<<<<<<< HEAD
-             
-=======
-                </div>
-                </div>
-                <!--  <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
-                        <div class="product-upper">
-                            <img src="img/product-1.jp" alt="">
-                        </div>
-                        <h2><a href="">1952 Alpine Renault 1300</a></h2>
-                        <div class="product-carousel-price">
-                            <ins>214.30</ins> <del>314.30</del>
-                        </div>  
-                        
-                        <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>
-                        </div>                       
-                    </div>
-                </div>
-              </div>
-              </div>   -->
-                
-                  
-                        
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
-                      
-              
-            
- <!--            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-pagination text-center">
-                        <nav>
-                          <ul class="pagination">
-                            <li>
-                              <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                              </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                              <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
- -->
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'UAT' of https://Vaibhav881@bitbucket.org/mfcwldemo/automart.git
-
+                </div>
+                </div>
+               
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -353,7 +254,6 @@
             </div>
         </div>
     </div>
-  -->
    <script type="text/javascript" >
    
    function add_cart(product_code){
